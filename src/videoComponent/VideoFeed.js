@@ -17,6 +17,7 @@ function VideoFeed() {
           headers: {
             Authorization: PEXELS_API_KEY,
           },
+          "Access-Control-Allow-Origin": "*",
         }
       );
       const data = await response.json();
