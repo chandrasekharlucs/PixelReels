@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 const PEXELS_API_KEY = process.env.REACT_APP_PEXELS_API_KEY;
 const PEXELS_API_URL = "https://api.pexels.com/videos/popular";
-console.log(PEXELS_API_KEY);
+console.log(process.env);
 function VideoFeed() {
   const [videos, setVideos] = useState([]);
   const [page, setPage] = useState(2);
