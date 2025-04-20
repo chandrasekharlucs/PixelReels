@@ -82,7 +82,7 @@ function VideoFeed() {
 
   return (
     <div style={{ maxWidth: "800px", margin: "0 auto", padding: "20px" }}>
-      <h1 style={{ textAlign: "center" }}>Pexels Video Gallery</h1>
+      <h1 style={{ textAlign: "center" }}>Video Gallery</h1>
       <div style={{ display: "grid", gridTemplateColumns: "1fr", gap: "20px" }}>
         {videos.map((video, index) => {
           const videoSrc =
