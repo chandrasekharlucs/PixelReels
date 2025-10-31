@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
 const PEXELS_API_KEY = process.env.REACT_APP_PEXELS_API_KEY;
-const PEXELS_API_URL =
-  "https://api.pexels.com/videos/search?query=cooking&per_page=8&page=1";
+const PEXELS_API_URL = "https://api.pexels.com/videos/search?query=cooking";
 function VideoFeed() {
   const [videos, setVideos] = useState([]);
   const [page, setPage] = useState(2);
@@ -12,7 +11,7 @@ function VideoFeed() {
     setLoading(true);
     try {
       const response = await fetch(
-        `${PEXELS_API_URL}?page=${page}&per_page=8`,
+        `${PEXELS_API_URL}&per_page=8&page=${page}`,
         {
           headers: {
             Authorization: PEXELS_API_KEY,
@@ -112,7 +111,7 @@ function VideoFeed() {
                   ref={lastVideoRef}
                   src={videoSrc}
                   controls
-                  muted
+                  // muted
                   style={{ width: "100%" }}
                 />
               </>
@@ -139,7 +138,7 @@ function VideoFeed() {
                   key={video.id}
                   src={videoSrc}
                   controls
-                  muted
+                  // muted
                   style={{ width: "100%" }}
                 />
               </>
