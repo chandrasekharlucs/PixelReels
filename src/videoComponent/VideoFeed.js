@@ -111,7 +111,7 @@ function VideoFeed() {
                   ref={lastVideoRef}
                   src={videoSrc}
                   controls
-                  // muted
+                  muted
                   style={{ width: "100%" }}
                 />
               </>
@@ -138,7 +138,7 @@ function VideoFeed() {
                   key={video.id}
                   src={videoSrc}
                   controls
-                  // muted
+                  muted
                   style={{ width: "100%" }}
                 />
               </>
